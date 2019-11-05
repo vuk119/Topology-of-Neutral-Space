@@ -3,7 +3,7 @@ import itertools
 
 
 
-class input:
+class b_input:
 
     def __init__(self, size):
         '''
@@ -42,6 +42,6 @@ class input:
         return self.output_to_class[output]
 
 
-input = input(4)
-print(input.generate_inputs())
-print(input.class_to_output)
+# input = input(4)
+# print(input.generate_inputs())
+# print(input.class_to_output)
