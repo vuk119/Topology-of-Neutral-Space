@@ -24,12 +24,14 @@ class perceptron:
 
         outputs = []
         for x in inputs:
-            outputs.append(self.sigmoid(np.dot(x, self.w)+self.b))
+            outputs.append(self.hard_sigmoid(np.dot(x, self.w)+self.b))
 
         return tuple(outputs)
 
-    def sigmoid(self, x):
+    def soft_sigmoid(self, x):
 
         return 1/(1+np.exp(-x))
 
-    
+    def hard_sigmoid(self, x):
+
+        return 1 if 1/(1+np.exp(-x))>=0.5 else 0

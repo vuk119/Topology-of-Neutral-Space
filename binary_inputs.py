@@ -24,6 +24,11 @@ class b_input:
         return list(itertools.product([0, 1], repeat=self.n))
 
     def generate_output_class_maps(self):
+        '''
+        Generates output class and class output maps.
+
+        There are 2^2^n possible output classes.
+        '''
         output_class_map = {}
         class_output_map = {}
 
@@ -42,6 +47,7 @@ class b_input:
         return self.output_to_class[output]
 
 
-# input = input(4)
+# input = b_input(2)
 # print(input.generate_inputs())
 # print(input.class_to_output)
+# print(input.output_to_class)
