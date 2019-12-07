@@ -14,7 +14,9 @@ class b_input:
 
         self.n = size
         self.inputs = self.generate_inputs()
-        self.class_to_output, self.output_to_class = self.generate_output_class_maps()
+
+        self.inputs.sort(key = lambda x: sum(x))
+        #self.class_to_output, self.output_to_class = self.generate_output_class_maps()
 
     def generate_inputs(self):
         '''
@@ -39,15 +41,7 @@ class b_input:
         class_to_output = dict(zip(classes, outputs))
 
         return class_to_output, output_to_class
-
     def get_output_from_class(self, clas):
         return self.class_to_output[clas]
-
     def get_class_from_output(self, output):
         return self.output_to_class[output]
-
-
-# input = b_input(2)
-# print(input.generate_inputs())
-# print(input.class_to_output)
-# print(input.output_to_class)

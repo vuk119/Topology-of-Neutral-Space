@@ -15,7 +15,6 @@ class perceptron:
         self.w = w
         self.b = b
 
-
     def predict(self, inputs):
         '''
         Expects list of tuples or lists.
